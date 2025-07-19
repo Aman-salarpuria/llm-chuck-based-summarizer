@@ -2,7 +2,9 @@ import os
 import requests
 from dotenv import load_dotenv
 
-prompt = """You are a high-context memory summarizer. You will be given a long section of a real ChatGPT conversation. Your task is to compress this into a highly detailed, emotionally aware, context-preserving narrative.
+example = "enter an example of your requested content or just the top few lines of the file"
+
+prompt = f"""You are a high-context memory summarizer. You will be given a long section of a real ChatGPT conversation. Your task is to compress this into a highly detailed, emotionally aware, context-preserving narrative.
 
 This is not a clinical or bullet-only summary. Your goal is to preserve the user’s original voice, thoughts, emotional state, struggles, and goals in a way that would let another AI assistant **truly understand who they are, what they’re going through, and what they’re building** — even after thousands of lines.
 
@@ -30,9 +32,7 @@ Do not replace full ideas with only bullets.
 Do not discard emotional content.
 
 EXAMPLE OF A PARA
-At 18, he's already thinking in leverage stacks, not lecture halls. While most of his peers chase placements or GPA clout, he’s plotting ₹100Cr control through quiet systems—real estate
-, software, and debt structuring. He doesn’t want to be rich to impress anyone. He wants control. And maybe freedom. But beneath that ambition is a haunting FOMO—the kind that comes when yo
-ur friends are scaling SMMA agencies while your product still has 3 users...
+{example}
 
 
 Write this as if you are building a memory file that **another AI would read before continuing this relationship**. It must reflect the full depth of the original 33,000 lines in compressed but truthful, tone-preserving form.
